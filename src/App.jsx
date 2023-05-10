@@ -3,6 +3,7 @@ import React from "react";
 import Header from "./components/Header";
 import Summary from "./components/Summary";
 import MealsList from "./components/MealsList";
+import Modal from "./components/Modal";
 
 const meals = [
   {
@@ -40,6 +41,7 @@ const meals = [
 function App() {
   return (
     <div>
+      <Modal />
       <Header />
       <Summary />
       <MealsList meals={meals} />
