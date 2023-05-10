@@ -5,6 +5,8 @@ import Summary from "./components/Summary";
 import MealsList from "./components/MealsList";
 import Modal from "./components/Modal";
 
+import { CartProvider } from "./context/cartContext";
+
 const meals = [
   {
     name: "Classic Burger",
@@ -45,13 +47,19 @@ function App() {
     setShowModal(true);
   };
 
+  const removeShowModal = () => {
+    setShowModal(false);
+  };
+
   return (
-    <div>
-      {showModal && <Modal />}
-      <Header handleShowModal={handleShowModal} />
-      <Summary />
-      <MealsList meals={meals} />
-    </div>
+    <CartProvider>
+      <div>
+        {showModal && <Modal removeShowModal={removeShowModal} />}
+        <Header handleShowModal={handleShowModal} />
+        <Summary />
+        <MealsList meals={meals} />
+      </div>
+    </CartProvider>
   );
 }
 
