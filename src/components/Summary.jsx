@@ -2,7 +2,7 @@ import React from "react";
 
 function Summary() {
   return (
-    <div className="border bg-gray-500 p-5 rounded-lg w-1/2 mx-auto mt-[-50px]">
+    <div className="border bg-gray-500 p-5 rounded-lg w-1/2 mx-auto mt-[-50px] tracking-wide">
       <h2 className="text-2xl font-bold text-white text-center">
         {" "}
         Welcome to our restaurant! We offer a wide selection of delicious dishes
