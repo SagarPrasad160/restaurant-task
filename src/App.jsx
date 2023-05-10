@@ -1,4 +1,4 @@
-import React from "react";
+import { useState } from "react";
 
 import Header from "./components/Header";
 import Summary from "./components/Summary";
@@ -39,10 +39,16 @@ const meals = [
 ];
 
 function App() {
+  const [showModal, setShowModal] = useState(false);
+
+  const handleShowModal = () => {
+    setShowModal(true);
+  };
+
   return (
     <div>
-      <Modal />
-      <Header />
+      {showModal && <Modal />}
+      <Header handleShowModal={handleShowModal} />
       <Summary />
       <MealsList meals={meals} />
     </div>
