@@ -1,8 +1,18 @@
-import React from "react";
+import { useContext, useEffect, useState } from "react";
 
 import { FaShoppingCart } from "react-icons/fa";
 
+import cartContext from "../context/cartContext";
+
 function Header({ handleShowModal }) {
+  const { mealsInCart } = useContext(cartContext);
+
+  const [cartSize, setCartSize] = useState(mealsInCart.length);
+
+  useEffect(() => {
+    setCartSize(mealsInCart.length);
+  }, [mealsInCart]);
+
   const styles = {
     background:
       "url(https://images.unsplash.com/photo-1600555379885-08a02224726d?crop=entropy&cs=srgb&fm=jpg&ixid=MnwzMjM4NDZ8MHwxfHJhbmRvbXx8fHx8fHx8fDE2ODM3MDYwMTY&ixlib=rb-4.0.3&q=85)",
@@ -22,7 +32,7 @@ function Header({ handleShowModal }) {
           <FaShoppingCart className="mr-1 text-white" />
           <span className="text-white font-semibold">Your Cart</span>
           <span className="p-2 flex items-center bg-red-600 rounded text-white font-bold text-2xl h-6 m-2">
-            0
+            {cartSize}
           </span>
         </div>
       </header>
