@@ -9,6 +9,10 @@ function Cart() {
     return acc + curr.price * curr.qty;
   }, 0);
 
+  if (mealsInCart.length === 0) {
+    return <p>Your cart is currently empty.</p>;
+  }
+
   return (
     <div>
       {mealsInCart.map((meal, index) => (
@@ -16,9 +20,9 @@ function Cart() {
           {meal.name} - ${meal.price} X {meal.qty}
         </div>
       ))}
-      <div className="flex justify-between mt-2">
-        <p className="font-bold">TOTAL:</p>
-        <p className="font-bold text-xl"> ${cartTotal}</p>
+      <div className="flex justify-between mt-2 font-bold text-xl">
+        <p>TOTAL:</p>
+        <p> ${Number(cartTotal).toFixed(2)}</p>
       </div>
     </div>
   );

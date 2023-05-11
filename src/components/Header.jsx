@@ -22,8 +22,8 @@ function Header({ handleShowModal }) {
   };
 
   return (
-    <div style={styles} className="h-48">
-      <header className="bg-red-600 h-14 flex justify-evenly p-2">
+    <div style={styles} className="h-56">
+      <header className="bg-red-600 h-16 flex justify-evenly p-4">
         <h1 className="text-white font-bold text-2xl">ReactMeals</h1>
         <div
           className="flex p-1 h-10 rounded-full w-48 bg-gray-500 bg-opacity-80 justify-center items-center cursor-pointer"
