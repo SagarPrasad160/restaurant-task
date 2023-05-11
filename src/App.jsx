@@ -38,6 +38,31 @@ const meals = [
     description: "Beer-battered cod, fries",
     price: 13.99,
   },
+  {
+    name: "Spaghetti",
+    price: 12.99,
+    description: "Classic spaghetti with marinara sauce",
+  },
+  {
+    name: "Chicken Caesar Salad",
+    price: 9.99,
+    description: "Romaine lettuce, grilled chicken, and Caesar dressing",
+  },
+  {
+    name: "Margherita Pizza",
+    price: 14.99,
+    description: "Fresh tomato sauce, mozzarella, and basil",
+  },
+  {
+    name: "Grilled Salmon",
+    price: 18.99,
+    description: "Fresh salmon fillet with lemon butter sauce",
+  },
+  {
+    name: "Hamburger",
+    price: 8.99,
+    description: "Beef patty, lettuce, tomato, and onion on a bun",
+  },
 ];
 
 function App() {

@@ -13,13 +13,12 @@ function Modal({ removeShowModal }) {
   }, []);
 
   return ReactDOM.createPortal(
-    <div>
+    <div className="fixed inset-0 z-50 flex items-center justify-center">
       <div className="absolute inset-0 bg-gray-300 opacity-80"></div>
-      <div className="absolute inset-60 p-10  bg-white">
-        {" "}
+      <div className="relative bg-white max-h-full overflow-y-auto p-10 rounded-lg shadow-lg">
         <Cart />
         <button
-          className="bg-red-500 w-16 h-10 rounded-full"
+          className="bg-red-500 w-16 h-10 rounded-full mt-4"
           onClick={removeShowModal}
         >
           Close

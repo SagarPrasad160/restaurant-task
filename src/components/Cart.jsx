@@ -11,12 +11,15 @@ function Cart() {
 
   return (
     <div>
-      {mealsInCart.map((meal) => (
-        <div key={meal.name}>
+      {mealsInCart.map((meal, index) => (
+        <div key={index} className="border-b p-5">
           {meal.name} - ${meal.price} X {meal.qty}
         </div>
       ))}
-      <div>TOTAL: ${cartTotal}</div>
+      <div className="flex justify-between mt-2">
+        <p className="font-bold">TOTAL:</p>
+        <p className="font-bold text-xl"> ${cartTotal}</p>
+      </div>
     </div>
   );
 }
